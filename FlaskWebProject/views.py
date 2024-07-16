@@ -60,6 +60,7 @@ def post(id):
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    app.logger.critical('hello world')
     if current_user.is_authenticated:
         return redirect(url_for('home'))
     form = LoginForm()
@@ -67,7 +68,11 @@ def login():
         user = User.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash('Invalid username or password')
+            app.logger.critical('Invalid login attempt')
+            app.logger.error('Invalid login attempt')
             return redirect(url_for('login'))
+        app.logger.critical(f'admin logged in successfully')
+        app.logger.error(f'admin logged in successfully')   
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
         if not next_page or urlparse(next_page).netloc != '':
