@@ -5,7 +5,7 @@
 *For **both** a VM or App Service solution for the CMS app:*
 - *Analyze costs, scalability, availability, and workflow*
 - *Choose the appropriate solution (VM or App Service) for deploying the app*
-- *Justify your choice*
+
 
 ### Analyze
 - Cost: 
