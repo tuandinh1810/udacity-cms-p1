@@ -8,19 +8,19 @@
 - *Justify your choice*
 
 ### Analyze
-Cost: 
+- Cost: 
     - App Service: Typically charged based on the tier (Basic, Standard, Premium, etc.) and the number of instances. Pricing includes compute resources, storage, and features such as traffic management. Easy predict costs due to fixed pricing tiers.
     - VM: Costs are based on the size of the VM, the number of VMs, and the duration they are running. Other factors include OS, storage, and network usage, making it harder to predict costs as they vary with usage and configuration.
 
-Scalability:
+- Scalability:
     - App Service: Support auto-scaling out as well as scaling up.
     - VM:Support scale  (by resizing the VM) or horizontally (by adding more VMs) but can be complex and involves setting up and managing Azure VM scale sets.
 
-Availability:
+- Availability:
     - Azure App Service: Automatically handles availability with built-in load balancing and redundancy, offering an SLA of 99.95% or higher, depending on the tier.
     - Azure VM: Requires manually setting up high availability,fault tolerance, and disaster recovery, offering high flexibility  but complexity and management.
 
-Workflow: 
+- Workflow: 
     - Azure App Service: Easily integrates with Azure DevOps, GitHub, and other CI/CD tools, as well as other Azure services. It has built-in support for many languages and frameworks such as .NET, .NET Core, Java, Node.js, PHP, and Python.
     - Azure VM: Requires significant effort to deploy and configure, including managing the OS, updates, patches, and other configurations.
 
